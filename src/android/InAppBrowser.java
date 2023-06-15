@@ -17,6 +17,8 @@
        under the License.
 */
 package org.apache.cordova.inappbrowser;
+import android.util.Log;
+
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -159,6 +161,7 @@ public class InAppBrowser extends CordovaPlugin {
      * @return A PluginResult object with a status and message.
      */
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
+        Log.d("AN TEST", "action is: " + action);
         if (action.equals("open")) {
             this.callbackContext = callbackContext;
             final String url = args.getString(0);
