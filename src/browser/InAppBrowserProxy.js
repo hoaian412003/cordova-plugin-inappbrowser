@@ -74,6 +74,7 @@ var IAB = {
     },
 
     open: function (win, lose, args) {
+        console.log('open function call: ', win, lose, args);
         var strUrl = args[0];
         var target = args[1];
         var features = args[2];
